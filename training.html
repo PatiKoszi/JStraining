@@ -11,6 +11,10 @@
         width: 50px;
         height: 50px;
     }
+
+    .red {
+        background-color: red;
+    }
 </style>
 
 <div id="app"></div>
@@ -19,18 +23,18 @@
 
     var app = document.getElementById('app');
     var table =createTable();
+    //app.appendChild(createTable());
 
-
-//wykasowałem z function() w nawiasach był event
 app.addEventListener('click', function () {
-    // jeśli cel zdarzenia matches równa się td to
-    //zaznacz jego kolor na 'red'
-    //czyli event.target - musi być razem i nie jest związane
-    // z nazwą funkcji
-    if (event.target.matches('td')) {
-        event.target.style.backgroundColor = 'red';
+
+    if (event.target.classList.contains('red')) {
+        event.target.classList.remove('red');
+    } else {
+        event.target.classList.add('red');
     }
 })
+
+
 
 
 
