@@ -25,22 +25,22 @@
     var table =createTable();
 
 app.addEventListener('click', function () {
-
     if (event.target.matches('td')) {
         toggleRed(event.target);
 
     }
 })
 
+    var i =0;
     setInterval(function() {
 
-        var cells = app.querySelector('td');
+        var cells = app.querySelectorAll('td');
+        toggleRed(cells[i]);
+        // operator modulo zwraca resztę z dzielenia pierwszego
+        //operatora przez drugi czyli tu wyjdzie 1
+        i=(i + 1)% 100;
 
-        cells.forEach(function(cell) {
-            toggleRed(cell);
-        });
-
-    }, 1000);
+    }, 10);
 
 
 
