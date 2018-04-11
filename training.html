@@ -33,6 +33,17 @@ app.addEventListener('click', function () {
         event.target.classList.add('red');
     }
 })
+    setInterval(function() {
+        //querySelector szuka pierwszego selektora w tym wypaku
+        //bedzie to pierwsza komorka td w app dostanie zmienna cell
+        // jak zrobić to z querySelectorAll
+        var cell = app.querySelector('td');
+        if (cell.classList.contains('red')) {
+            cell.classList.remove('red');
+        } else {
+            cell.classList.add('red');
+        }
+    }, 1000);
 
 
 
