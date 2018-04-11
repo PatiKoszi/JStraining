@@ -25,22 +25,20 @@
     var table =createTable();
 
 app.addEventListener('click', function () {
-    // znowu w funkcji nie dałem event
+
     if (event.target.matches('td')) {
         toggleRed(event.target);
-    // czy to oznacza wywołaj funkcje dla event.target
-        // ktore zostało określone powyżej ???
-        // czyli po kliknieciu w cel zdarzenia td
-        // dlatego nie działa z ramka ??
+
     }
 })
 
     setInterval(function() {
 
-        var cell = app.querySelector('td');
-        toggleRed(cell);
-        // tu wywołaj funkcje toggleRed dla cell
-        // zmienna określona powyzej czyli piewszy element td
+        var cells = app.querySelector('td');
+
+        cells.forEach(function(cell) {
+            toggleRed(cell);
+        });
 
     }, 1000);
 
