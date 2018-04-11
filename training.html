@@ -23,26 +23,25 @@
 
     var app = document.getElementById('app');
     var table =createTable();
-    //app.appendChild(createTable());
 
 app.addEventListener('click', function () {
-
-    if (event.target.classList.contains('red')) {
-        event.target.classList.remove('red');
-    } else {
-        event.target.classList.add('red');
+    // znowu w funkcji nie dałem event
+    if (event.target.matches('td')) {
+        toggleRed(event.target);
+    // czy to oznacza wywołaj funkcje dla event.target
+        // ktore zostało określone powyżej ???
+        // czyli po kliknieciu w cel zdarzenia td
+        // dlatego nie działa z ramka ??
     }
 })
+
     setInterval(function() {
-        //querySelector szuka pierwszego selektora w tym wypaku
-        //bedzie to pierwsza komorka td w app dostanie zmienna cell
-        // jak zrobić to z querySelectorAll
+
         var cell = app.querySelector('td');
-        if (cell.classList.contains('red')) {
-            cell.classList.remove('red');
-        } else {
-            cell.classList.add('red');
-        }
+        toggleRed(cell);
+        // tu wywołaj funkcje toggleRed dla cell
+        // zmienna określona powyzej czyli piewszy element td
+
     }, 1000);
 
 

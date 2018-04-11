@@ -1,3 +1,12 @@
+function toggleRed(element) {
+    if (element.classList.contains('red')) {
+        element.classList.remove('red')
+    } else {
+        element.classList.add('red')
+    }
+}
+
+
 function createTable() {
     var table = document.createElement('table');
     var tbody = document.createElement('tbody');
