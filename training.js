@@ -5,10 +5,10 @@ function createTable() {
     table.appendChild(tbody);
 
 
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 5; i++) {
         var tr = document.createElement('tr');
         tbody.appendChild(tr);
-        for (var j = 0; j < 10; j++) {
+        for (var j = 0; j < 5; j++) {
             var td = document.createElement('td');
             tr.appendChild(td)
         }

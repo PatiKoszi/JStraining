@@ -16,10 +16,17 @@
 <div id="app"></div>
 <script src="training.js"> </script>
 <script>
-var app = document.getElementById('app');
-var table =createTable();
 
-app.addEventListener('click', function (event) {
+    var app = document.getElementById('app');
+    var table =createTable();
+
+
+//wykasowałem z function() w nawiasach był event
+app.addEventListener('click', function () {
+    // jeśli cel zdarzenia matches równa się td to
+    //zaznacz jego kolor na 'red'
+    //czyli event.target - musi być razem i nie jest związane
+    // z nazwą funkcji
     if (event.target.matches('td')) {
         event.target.style.backgroundColor = 'red';
     }
